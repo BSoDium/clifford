@@ -4,7 +4,7 @@ set(entrypoint "cliford")
 set(namespace "core")
 project(cliford 
     VERSION 0.1.0 
-    DESCRIPTION "cliford 4D rendering engine"
+    DESCRIPTION "cliford generic command line interface"
 )
 
 if (NOT CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
@@ -22,12 +22,6 @@ file(GLOB_RECURSE sources CONFIGURE_DEPENDS
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
     "${PROJECT_SOURCE_DIR}/src/*.hpp"
 )
-
-find_package(OpenGL REQUIRED)
-find_package(glfw3 REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(glm REQUIRED)
-
 target_sources(${PROJECT_NAME} PRIVATE ${sources})
 
 target_include_directories(${PROJECT_NAME}
@@ -39,15 +33,6 @@ target_include_directories(${PROJECT_NAME}
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         # where external projects will look for the library's public headers
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
-)
-
-target_link_libraries(${PROJECT_NAME} 
-    PRIVATE
-        OpenGL::GL
-        OpenGL::GLU
-        GLEW::GLEW
-        glm::glm
-        glfw
 )
 
 # install public headers
