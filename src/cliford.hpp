@@ -21,7 +21,7 @@
 #include <vector>
 #include <optional>
 
-namespace cliford
+namespace core
 {
 
   class CLI;

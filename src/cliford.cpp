@@ -1,6 +1,6 @@
 #include "cliford.hpp"
 
-namespace cliford
+namespace core
 {
 
   CLI::CLI(std::string name, std::string description, std::string author, std::string year)
