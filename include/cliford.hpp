@@ -51,6 +51,7 @@ namespace core
   {
     std::string command;
     std::vector<std::string> arguments;
+    bool run = false;
     bool success = false;
   };
 

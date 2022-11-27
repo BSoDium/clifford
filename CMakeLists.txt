@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 set(entrypoint "cliford")
 set(namespace "core")
 project(cliford 
-    VERSION 0.1.0 
+    VERSION 1.0.0 
     DESCRIPTION "cliford generic command line interface"
 )
 
@@ -46,6 +46,7 @@ if(CMAKE_COMPILER_IS_GNUCXX)
     # treat warnings as errors
     target_compile_options(${PROJECT_NAME} PRIVATE -Werror)
 endif()
+
 
 # where to find our CMake modules
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")

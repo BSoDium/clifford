@@ -134,11 +134,12 @@ namespace core
             {
               printError(e.what());
             }
+            userInput.run = true;
             break;
           }
         }
         _history.push_back(userInput);
-        if (!userInput.success)
+        if (!userInput.run)
         {
           printError("Unknown command '" + userInput.command + "'.");
         }

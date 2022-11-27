@@ -1,0 +1,5 @@
+{
+  "name": "cliford",
+  "version-string": "1.0.0",
+  "description": "Cliford is a generic command line interface for your C++ application."
+}
