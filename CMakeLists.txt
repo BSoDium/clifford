@@ -37,7 +37,7 @@ target_include_directories(${PROJECT_NAME}
 
 # install public headers
 set(public_headers
-    src/${entrypoint}.hpp
+    include/${entrypoint}.hpp
 )
 
 # not for MSVC
