@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
 
-set(entrypoint "cliford")
+set(entrypoint "clifford")
 set(namespace "core")
-project(cliford 
+project(clifford 
     VERSION 1.0.0 
-    DESCRIPTION "cliford generic command line interface"
+    DESCRIPTION "clifford generic command line interface"
 )
 
 if (NOT CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

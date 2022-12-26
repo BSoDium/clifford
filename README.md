@@ -1,6 +1,6 @@
-# Cliford
+# Clifford
 
-Cliford is a simple and highly customizable command line interface for your 
+Clifford is a simple and highly customizable command line interface for your 
 application. It is fully written in C++, and vcpkg support is planned.
 
 ## Features

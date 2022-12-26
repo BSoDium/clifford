@@ -1,4 +1,4 @@
-#include "../include/cliford.hpp"
+#include "../include/clifford.hpp"
 
 namespace core
 {

@@ -9,7 +9,7 @@
 #define CYAN(x) "\033[36m" << x << "\033[0m"
 #define WHITE(x) "\033[37m" << x << "\033[0m"
 
-#define APP_NAME "CLIford"
+#define APP_NAME "CLIfford"
 #define APP_DESCRIPTION "A generic command line interface for C++ applications."
 #define AUTHOR "BSoDium"
 #define YEAR "2022"

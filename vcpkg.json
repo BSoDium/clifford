@@ -1,5 +1,6 @@
 {
-  "name": "cliford",
-  "version-string": "1.0.0",
-  "description": "Cliford is a generic command line interface for your C++ application."
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "clifford",
+  "version": "1.0.0",
+  "description": "Clifford is a generic command line interface for your C++ application."
 }
