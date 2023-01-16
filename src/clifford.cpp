@@ -1,4 +1,5 @@
 #include "../include/clifford.hpp"
+#include "utils.hpp"
 
 namespace core
 {
@@ -112,6 +113,10 @@ namespace core
       std::getline(std::cin, input);
       std::istringstream iss(input);
       std::vector<std::string> tokens{std::istream_iterator<std::string>{iss}, std::istream_iterator<std::string>{}};
+
+      // Merge quoted strings
+      tokens = mergeStringTokens(tokens);
+      
       if (tokens.size() > 0)
       {
         UserInput userInput;
