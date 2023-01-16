@@ -11,6 +11,8 @@ namespace core
     _author = author;
     _year = year;
 
+    resetPrompt();
+
     _addCommand("help", "Prints this help message.", [this](CLI *cli)
                 { cli->_printHelp(); });
     _addCommand("about", "Prints information about this program.", [this](CLI *cli)
@@ -95,10 +97,20 @@ namespace core
 
   void CLI::_printPrompt()
   {
-    std::cout << GREEN(_name) << "> ";
+    std::cout << GREEN(_prompt) << "> ";
   }
 
-  void CLI::printError(std::string message)
+  void CLI::setPrompt(std::string prompt)
+  {
+    _prompt = prompt;
+  }
+
+  void CLI::resetPrompt()
+  {
+    _prompt = _name;
+  }
+
+  void CLI::error(std::string message)
   {
     std::cerr << RED("Error: " << message) << std::endl;
   }
@@ -136,7 +148,7 @@ namespace core
             }
             catch (std::exception &e)
             {
-              printError(e.what());
+              error(e.what());
             }
             userInput.run = true;
             break;
@@ -145,7 +157,7 @@ namespace core
         _history.push_back(userInput);
         if (!userInput.run)
         {
-          printError("Unknown command '" + userInput.command + "'.");
+          error("Unknown command '" + userInput.command + "'.");
         }
       }
     }

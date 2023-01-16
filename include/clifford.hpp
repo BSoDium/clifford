@@ -65,6 +65,7 @@ namespace core
     std::string _description;
     std::string _author;
     std::string _year;
+    std::string _prompt;
 
   protected:
     std::vector<CLICommand> _commands;
@@ -84,7 +85,9 @@ namespace core
     CLI(std::string name = APP_NAME, std::string description = APP_DESCRIPTION, std::string author = AUTHOR, std::string year = YEAR);
     void run();
     void exit();
-    void printError(std::string message);
+    void error(std::string message);
+    void setPrompt(std::string prompt);
+    void resetPrompt();
   };
 }
 
