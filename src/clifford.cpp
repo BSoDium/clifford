@@ -77,16 +77,15 @@ namespace core
   void CLI::_printSplash()
   {
     std::cout << std::endl;
-    std::cout << BLUE(" ▄████▄   ██▓     ██▓  █████▒▒█████   ██▀███  ▓█████▄ ") << std::endl;
-    std::cout << BLUE("▒██▀ ▀█  ▓██▒    ▓██▒▓██   ▒▒██▒  ██▒▓██ ▒ ██▒▒██▀ ██▌") << std::endl;
-    std::cout << BLUE("▒▓█    ▄ ▒██░    ▒██▒▒████ ░▒██░  ██▒▓██ ░▄█ ▒░██   █▌") << std::endl;
-    std::cout << BLUE("▒▓▓▄ ▄██▒▒██░    ░██░░▓█▒  ░▒██   ██░▒██▀▀█▄  ░▓█▄   ▌") << std::endl;
-    std::cout << BLUE("▒ ▓███▀ ░░██████▒░██░░▒█░   ░ ████▓▒░░██▓ ▒██▒░▒████▓ ") << std::endl;
-    std::cout << BLUE("░ ░▒ ▒  ░░ ▒░▓  ░░▓   ▒ ░   ░ ▒░▒░▒░ ░ ▒▓ ░▒▓░ ▒▒▓  ▒ ") << std::endl;
-    std::cout << BLUE("  ░  ▒   ░ ░ ▒  ░ ▒ ░ ░       ░ ▒ ▒░   ░▒ ░ ▒░ ░ ▒  ▒ ") << std::endl;
-    std::cout << BLUE("░        ░ ░    ░   ░ ░     ░ ░ ░ ▒    ░░   ░  ░ ░  ░ ") << std::endl;
-    std::cout << BLUE("░ ░          ░  ░     ░         ░ ░     ░        ░    ") << std::endl;
-    std::cout << BLUE("░                                                ░    ") << std::endl;
+    std::cout << BLUE(" ▄████████   ▄█        ▄█     ▄████████    ▄████████  ▄██████▄     ▄████████ ████████▄  ") << std::endl;
+    std::cout << BLUE(" ███    ███ ███       ███    ███    ███   ███    ███ ███    ███   ███    ███ ███   ▀███ ") << std::endl;
+    std::cout << BLUE(" ███    █▀  ███       ███▌   ███    █▀    ███    █▀  ███    ███   ███    ███ ███    ███ ") << std::endl;
+    std::cout << BLUE(" ███        ███       ███▌  ▄███▄▄▄      ▄███▄▄▄     ███    ███  ▄███▄▄▄▄██▀ ███    ███ ") << std::endl;
+    std::cout << BLUE(" ███        ███       ███▌ ▀▀███▀▀▀     ▀▀███▀▀▀     ███    ███ ▀▀███▀▀▀▀▀   ███    ███ ") << std::endl;
+    std::cout << BLUE(" ███    █▄  ███       ███    ███          ███        ███    ███ ▀███████████ ███    ███ ") << std::endl;
+    std::cout << BLUE(" ███    ███ ███▌    ▄ ███    ███          ███        ███    ███   ███    ███ ███   ▄███ ") << std::endl;
+    std::cout << BLUE(" ████████▀  █████▄▄██ █▀     ███          ███         ▀██████▀    ███    ███ ████████▀  ") << std::endl;
+    std::cout << BLUE("           ▀                                                     ███    ███             ") << std::endl;
     std::cout << std::endl;
 
     std::cout << "Welcome to " << GREEN(_name) << "!" << std::endl;

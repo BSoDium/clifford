@@ -9,6 +9,28 @@ project(clifford
 
 if (NOT CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     message(STATUS "This project has a top-level one called [${CMAKE_PROJECT_NAME}]")
+    # Check if the git repository is up-to-date
+    find_package(Git QUIET)
+    if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
+        # Notify user if local repository is out of date
+        execute_process(
+            COMMAND ${GIT_EXECUTABLE} rev-parse HEAD
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+            OUTPUT_VARIABLE "GIT_HEAD_HASH"
+            ERROR_QUIET
+            OUTPUT_STRIP_TRAILING_WHITESPACE
+        )
+        execute_process(
+            COMMAND ${GIT_EXECUTABLE} rev-parse @{u}
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+            OUTPUT_VARIABLE "GIT_UPSTREAM_HASH"
+            ERROR_QUIET
+            OUTPUT_STRIP_TRAILING_WHITESPACE
+        )
+        if(NOT "${GIT_HEAD_HASH}" STREQUAL "${GIT_UPSTREAM_HASH}")
+            message(WARNING "Your local Clifford installation is out of date. Please pull the latest changes.")
+        endif()
+    endif()
 else()
     message(STATUS "This project is a top-level one")
 endif()
