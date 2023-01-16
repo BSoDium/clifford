@@ -18,8 +18,13 @@ std::vector<std::string> mergeStringTokens(std::vector<std::string> tokens) {
       tokens[i] += " " + tokens[i + 1];
       tokens[i].erase(tokens[i].size() - 1, 1);
       tokens.erase(tokens.begin() + i + 1);
+    } else if (tokens[i].front() == '"' && tokens[i].back() == '"')
+    {
+      tokens[i].erase(0, 1);
+      tokens[i].erase(tokens[i].size() - 1, 1);
     }
   }
+  return tokens;
 }
 
 #endif // CLIFFORD_UTILS_HPP
